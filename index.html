@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlyRank – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Simple theme toggle – minimalist, dark, colorful
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    // Persist theme across reloads
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme') || 'minimalist';
+      setTheme(saved);
+    });
+    function changeTheme(theme) {
+      setTheme(theme);
+      localStorage.setItem('theme', theme);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>FlyRank Portfolio</h1>
+    <nav>
+      <button onclick="changeTheme('minimalist')">Minimalist</button>
+      <button onclick="changeTheme('dark')">Dark</button>
+      <button onclick="changeTheme('colorful')">Colorful</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>I prove I can define, scope, and build production‑ready agentic AI systems using LLM orchestrators and python.</h2>
+    <p>10‑second pitch: I build end‑to‑end AI agents that ship.</p>
+    <a href="#case-study" class="cta">See a real case study</a>
+  </section>
+
+  <section id="case-study" class="case-study">
+    <h2>Case Study: Agent Build</h2>
+    <p>*(Insert concise technical walkthrough here – architecture, orchestration, Python code snippets, performance results.)*</p>
+    <p>When you’re ready to discuss how this approach can solve your product challenges, schedule a 15‑minute discovery call:</p>
+    <!-- Calendly inline widget -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/your‑username/15min" style="min-width:320px;height:630px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Technical AI Product Manager with a track record of delivering production‑ready LLM‑orchestrated agents. Experience includes … (add bullet points).</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact & Booking</h2>
+    <p>If you prefer to book from here, the same Calendly widget is available:</p>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/your‑username/15min" style="min-width:320px;height:630px;"></div>
+  </section>
+
+  <footer>
+    <p>© 2026 FlyRank. All rights reserved.</p>
+  </footer>
+</body>
+</html>
